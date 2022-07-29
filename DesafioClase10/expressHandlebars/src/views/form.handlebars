@@ -1,0 +1,26 @@
+<div class="container-fluid bg-secondary h-100 d-flex flex-column justify-content-evenly align-items-center">
+
+    <h1 class="text-white">{{saludo}} </h1>
+
+    <a class="btn btn-primary " style="text-decoration: none; color: white;" href="/products">Lista de productos</a>
+
+    <form id="form">
+        <div class="mb-4">
+            <label for="title" class="text-white form-label color">Nombre del producto</label>
+            <input type="text" class="bg-dark text-white form-control" name="title" id="title" required>
+        </div>
+        <div class="mb-4">
+            <label for="picture" class="text-white form-label">Imagen</label>
+            <input type="file" class="bg-dark text-white form-control" id="picture" name="picture" required>
+        </div>
+        <div class="mb-4">
+            <label for="price" class="text-white form-label">Precio</label>
+            <input type="number" class="bg-dark text-white form-control" id="price" name="price" required>
+        </div>
+        <button type="submit" class="text-white btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
+<script src="js/newProduct.js"></script>

@@ -1,0 +1,28 @@
+<div style="min-height: 100vh;" class="container-fluid bg-secondary h-auto d-flex flex-column justify-content-evenly align-items-center">
+    <a class="btn btn-primary m-5" style="text-decoration: none; color: white;" href="/">Cargar productos</a>
+    {{#if hasProducts}}
+    <h1>No se encontraron productos</h1>
+    {{else}}
+    <table class="table table-dark  table-striped w-75 ">
+        <thead>
+            <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr style="min-height: 5000000px;">
+                <td class="w-50">{{this.title}}</td>
+                <td class="w-25">${{this.price}} </td>
+                <td class="w-100  d-flex flex-row justify-content-end"><img
+                        src="http://localhost:8080/img/{{this.thumbnail}}" alt="prodImage"
+                        class="img-fluid w-100 bg-transparent "></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{/if}}
+
+</div>
