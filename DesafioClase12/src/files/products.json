@@ -1,0 +1,50 @@
+[
+  {
+    "title": "ejemplo",
+    "price": 60,
+    "thumbnail": "https://images.pexels.com/photos/3819969/pexels-photo-3819969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "id": 1
+  },
+  {
+    "title": "Silla de escritorio Corsair T3 Rush gamer ergonómica",
+    "price": "98700",
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_895157-MLA43822436574_102020-F.webp",
+    "id": 30
+  },
+  {
+    "title": "Cámara web Logitech PTZ Pro 2 Full HD 30FPS color gris/negro",
+    "price": "105600",
+    "thumbnail": "https://resource.logitech.com/w_800,c_lpad,ar_16:9,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/products/logitech/conference-cameras/rally-ultra-hd-ptz-camera/rally-camera65507.png?v=1",
+    "id": 31
+  },
+  {
+    "title": "joystick inalámbrico Microsoft Xbox Xbox Series X|S controller + USB-C cable carbon black",
+    "price": "17900",
+    "thumbnail": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4GOMY?ver=97e3",
+    "id": 32
+  },
+  {
+    "title": "MÁS VENDIDO Micrófono HyperX QuadCast condensador multipatrón negro",
+    "price": "25800",
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_841463-MLA32553444734_102019-O.webp",
+    "id": 33
+  },
+  {
+    "title": "saraza",
+    "thumbnail": "https://cdn.shopify.com/s/files/1/0229/0839/files/Untitled_design__1.png?2393&format=jpg&quality=90",
+    "price": "100055",
+    "id": 34
+  },
+  {
+    "title": "pizza",
+    "thumbnail": "https://images.pexels.com/photos/1260968/pexels-photo-1260968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": "2000",
+    "id": 35
+  },
+  {
+    "title": "pizza 2",
+    "thumbnail": "https://images.pexels.com/photos/1260968/pexels-photo-1260968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "price": "5000",
+    "id": 36
+  }
+]
