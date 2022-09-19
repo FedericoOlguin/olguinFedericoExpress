@@ -11,19 +11,15 @@ const router = Router()
 
 
 router.get("/", (req, res) => {
-    // console.log(req.session);
     if (req.session.user) {
         res.render("form", {
             user: req.session.user,
             hasUser: true
         })
-        // res.redirect("/current")
+
     } else {
         res.redirect("logIn")
     }
-    // res.render("form", {
-    //     saludo: "Desafio Log-in "
-    // })
 })
 router.get("/logIn", (req, res) => {
     res.render("logIn")
@@ -36,8 +32,6 @@ router.get("/logout", (req, res) => {
     })
 })
 router.get("/current", (req, res) => {
-    // console.log(req.session.user);
-    // if (user) return res.redirect("logIn")
     res.render("form", {
         saludo: "Desafio Log-in ",
         user: req.session.user
@@ -46,7 +40,6 @@ router.get("/current", (req, res) => {
 })
 router.get("/products", async (req, res) => {
     let list = await db("products").select("*")
-    // console.log(list);
     res.render("productsList", {
         products: list,
         hasProducts: !list.length > 0
