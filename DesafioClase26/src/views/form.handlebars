@@ -1,0 +1,52 @@
+<div style="background-color: green;width: 100%;padding:2rem 0; text-align: center;">
+
+    <h2>Bienvenido {{user.email}}
+        <button id="logOut">Cerrar sesion</button>
+</div>
+
+<div style="min-height: 100vh;" class="container-fluid  d-flex flex-column justify-content-between align-items-center">
+    {{!-- <h1 class="mt-5 text-white">{{saludo}} </h1> --}}
+
+    <form class="w-50" id="form">
+        <div class="mb-4">
+            <label for="title" class="text-white form-label color">Nombre del producto</label>
+            <input type="text" class="bg-dark text-white form-control" name="title" id="title" required>
+        </div>
+        <div class="mb-4">
+            <label for="thumbnail" class="text-white form-label">Imagen-URL</label>
+            <input type="text" class="bg-dark text-white form-control" id="thumbnail" name="thumbnail" required>
+        </div>
+        <div class="mb-4">
+            <label for="price" class="text-white form-label">Precio</label>
+            <input type="number" class="bg-dark text-white form-control" id="price" name="price" required>
+        </div>
+        <button type="submit" class="text-white btn btn-primary">Submit</button>
+    </form>
+
+    <div style="min-height: 50vh;"
+        class="container-fluid bg-secondary h-auto mt-5 d-flex flex-column justify-content-evenly align-items-center">
+        <a class="btn btn-primary " style="text-decoration: none; color: white;" href="/products-test">Lista de
+            productos
+            random</a>
+        <h1 class="mb-5">Lista de productos </h1>
+
+
+        <table class="table table-dark  table-striped w-75 ">
+            <thead>
+                <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Imagen</th>
+                </tr>
+            </thead>
+            <tbody id="trBody">
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/newProduct.js"></script>
