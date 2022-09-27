@@ -48,4 +48,16 @@ router.get("/registerFail", (req, res) => {
     })
 })
 
+router.get("/github", passport.authenticate("github", { scope: [] }), async (req, res) => {
+})
+router.get("/githubCallback", passport.authenticate("github"), async (req, res) => {
+    // console.log(req.user);
+    req.session.user = {
+        name: req.user.name,
+        email: req.user.email,
+        _id: req.user._id
+    }
+    res.redirect("/")
+})
+
 export default router
