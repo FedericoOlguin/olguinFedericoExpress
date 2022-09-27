@@ -7,7 +7,6 @@ form.addEventListener("submit", (e) => {
     let obj = {}
 
     data.forEach((value, key) => obj[key] = value)
-    // console.log(obj);
     fetch("api/session/login", {
         method: "POST",
         body: JSON.stringify(obj),
@@ -22,6 +21,8 @@ form.addEventListener("submit", (e) => {
                 console.log(window.location.href);
                 window.location.replace("http://localhost:8080/current")
                 // location.href = "http://localhost:8080/current"
+            }else{
+                window.location.replace("http://localhost:8080/errorLogin")
             }
         })
 })

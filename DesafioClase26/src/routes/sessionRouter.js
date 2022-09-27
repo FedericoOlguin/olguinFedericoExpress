@@ -22,7 +22,8 @@ router.post("/login", passport.authenticate("login", { failureRedirect: "/api/se
     })
 
 })
-router.get("loginFail", async (req, res) => {
+router.get("/loginFail", async (req, res) => {
+    // res.redirect("http://localhost:8080/login/errorLogin")
     res.json({
         message: "Error al intentar login",
         success: false,

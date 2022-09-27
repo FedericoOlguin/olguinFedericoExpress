@@ -52,6 +52,12 @@ router.get("/products", async (req, res) => {
         hasProducts: !list.length > 0
     })
 })
+router.get("/errorLogin", async (req, res) => {
+    res.render("errLogin")
+})
+router.get("/errRegister", async (req, res) => {
+    res.render("errRegister")
+})
 
 router.get("/products-test", async (req, res) => {
     let products = []
