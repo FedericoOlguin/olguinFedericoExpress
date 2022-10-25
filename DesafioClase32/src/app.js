@@ -17,7 +17,13 @@ import dotenv from "dotenv"
 import minimist from "minimist"
 import randomRouter from "./routes/randomRouter.js"
 import compression from "compression"
+import pino from "pino"
+const streams = [
+    { level: "info", stream: process.stdout },
+    { level: "warn", stream: pino.destination("./pinoErrors.log") }
+]
 
+const logger = pino({}, pino.multistream(streams))
 
 const { p } = minimist(process.argv.slice(2), { default: { p: 8080 } })
 dotenv.config()
@@ -62,11 +68,17 @@ app.use("/api/session", sessionRouter)
 app.use("/api/randoms", randomRouter)
 
 app.get("/messages", async (req, res) => {
-    let pes = await chatContoller.getAllmessages()
-    // console.log(pes.messages);
-    let mes = await db("chat").insert(pes.messages)
-    // console.log(mes);
-    res.json({ status: 200, messages: mes })
+    try {
+
+        let pes = await chatContoller.getAllmessages()
+        // console.log(pes.messages);
+        let mes = await db("chat").insert(pes.messages)
+        // console.log(mes);
+        logger.info("dato que llega a message", data = mes)
+        res.json({ status: 200, messages: mes })
+    } catch (error) {
+        logger.error(error)
+    }
 })
 
 app.get("/message", async (req, res) => {
