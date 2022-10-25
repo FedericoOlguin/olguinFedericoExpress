@@ -1,0 +1,34 @@
+<div style="min-height: 50vh;"
+    class="container-fluid bg-secondary h-auto mt-5 d-flex flex-column justify-content-evenly align-items-center">
+    <h1 class="mb-5">Lista de productos </h1>
+   
+
+    <table class="table table-dark  table-striped w-75 ">
+        <thead>
+            <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Desctiption</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
+            </tr>
+        </thead>
+        <tbody id="trBody">
+            {{#each products}}
+            <tr style="min-height: 5000000px;">
+                <td class="w-25">{{this.name}}</td>
+                <td class="w-25">{{this.description}} </td>
+                <td class="w-10">{{this.stock}} </td>
+                <td class="w-25">${{this.price}} </td>
+                <td class="w-100  d-flex flex-row justify-content-end" style="height:100% ;">
+                    <img src="{{this.thumbnail}}" alt="prodImage" class="img-fluid w-100 bg-transparent " />
+                </td>
+            </tr>
+            {{/each}}
+
+
+        </tbody>
+    </table>
+
+
+</div>
