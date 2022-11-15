@@ -1,0 +1,19 @@
+<div
+    style="display: flex;flex-direction: column;width: 100%; background-color: gray;height: 100vh; justify-content: center; align-items: center;">
+    <img src={{user.imageUrl}} alt=""
+        style="width: 100px;object-fit: cover;height: 100px; border-radius: 50%;background-color: yellow;margin:0 0 1rem 0">
+    <h3 style="width: 50%;">Nombre: {{user.name}}</h3>
+    <h3 style="width: 50%;">Email: {{user.email}}</h3>
+    <h3 style="width: 50%;">Direccion declarada: {{user.address}}</h3>
+    <h3 style="width: 50%;">Rol: {{user.rol}}</h3>
+    <h3 style="width: 50%;">Edad: {{user.age}}</h3>
+
+
+    <div>
+        <a href="/home">
+            <button style="height: 2.5rem;">
+                Home
+            </button>
+        </a>
+    </div>
+</div>
